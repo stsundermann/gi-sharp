@@ -3,6 +3,7 @@ using System.Xml.Serialization;
 
 namespace Generator.Gir
 {
+    [XmlInclude(typeof(InstanceParameter))]
     public class Parameter
     {
         [XmlAttribute("allow-none")]
@@ -12,10 +13,10 @@ namespace Generator.Gir
         public bool CallerAllocates;
 
         [XmlAttribute("closure")]
-        public bool Closure;
+        public int Closure;
 
         [XmlAttribute("destroy")]
-        public bool Destroy;
+        public int Destroy;
 
         [XmlAttribute("direction")]
         public Direction Direction;

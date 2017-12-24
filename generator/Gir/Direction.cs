@@ -9,7 +9,7 @@ namespace Generator.Gir
 		Out,
 		[XmlEnum("in")]
 		In,
-		[XmlEnum("in-out")]
+		[XmlEnum("inout")]
 		InOut
 	}
 }

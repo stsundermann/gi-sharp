@@ -39,7 +39,9 @@ namespace Generator.Gir
         [XmlElement("return-value")]
         public ReturnValue ReturnValue;
 
-        [XmlElement("parameter")]
+        [XmlArray("parameters")]
+        [XmlArrayItem("parameter", Type = typeof(Parameter))]
+        [XmlArrayItem("instance-parameter", Type = typeof(InstanceParameter))]
         public List<Parameter> Parameters;
     }
 }

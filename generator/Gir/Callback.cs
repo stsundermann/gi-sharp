@@ -26,7 +26,9 @@ namespace Generator.Gir
         [XmlAttribute("type", Namespace = "http://www.gtk.org/introspection/c/1.0")]
         public string CType;
 
-        [XmlElement("parameter")]
+        [XmlArray("parameters")]
+        [XmlArrayItem("parameter", Type = typeof(Parameter))]
+        [XmlArrayItem("instance-parameter", Type = typeof(InstanceParameter))]
         public List<Parameter> Parameters;
 
         [XmlElement("return-value")]
