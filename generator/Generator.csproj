@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{C763F5BA-1B3C-4A88-B4F5-351EDC1BB017}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>generator</RootNamespace>
+    <AssemblyName>generator</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>false</ExternalConsole>
+    <PlatformTarget>x86</PlatformTarget>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Gir\Namespace.cs" />
+    <Compile Include="Gir\Repository.cs" />
+    <Compile Include="Gir\Alias.cs" />
+    <Compile Include="Gir\Record.cs" />
+    <Compile Include="Gir\Class.cs" />
+    <Compile Include="Gir\Constant.cs" />
+    <Compile Include="Gir\Interface.cs" />
+    <Compile Include="Gir\Callback.cs" />
+    <Compile Include="Gir\Function.cs" />
+    <Compile Include="Gir\Union.cs" />
+    <Compile Include="Gir\Enumeration.cs" />
+    <Compile Include="Gir\Bitfield.cs" />
+    <Compile Include="Gir\Include.cs" />
+    <Compile Include="Gir\Package.cs" />
+    <Compile Include="Gir\CInclude.cs" />
+    <Compile Include="Gir\Type.cs" />
+    <Compile Include="Gir\Array.cs" />
+    <Compile Include="Gir\Direction.cs" />
+    <Compile Include="Gir\Scope.cs" />
+    <Compile Include="Gir\Parameter.cs" />
+    <Compile Include="Gir\InstanceParameter.cs" />
+    <Compile Include="Gir\ReturnValue.cs" />
+    <Compile Include="Gir\TransferOwnership.cs" />
+    <Compile Include="Gir\Field.cs" />
+    <Compile Include="Gir\Member.cs" />
+    <Compile Include="Gir\Implements.cs" />
+    <Compile Include="Gir\Prerequisite.cs" />
+    <Compile Include="Gir\Constructor.cs" />
+    <Compile Include="Gir\Method.cs" />
+    <Compile Include="Gir\Property.cs" />
+    <Compile Include="Gir\VirtualMethod.cs" />
+    <Compile Include="Gir\Signal.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Gir\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
