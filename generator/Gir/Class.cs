@@ -72,7 +72,7 @@ namespace Generator.Gir
         public List<VirtualMethod> VirtualMethods;
 
         [XmlElement("function")]
-        public List<Function> Function;
+        public List<Function> Functions;
 
         [XmlElement("signal", Namespace = "http://www.gtk.org/introspection/glib/1.0")]
         public List<Signal> Signals;
