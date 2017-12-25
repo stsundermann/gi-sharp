@@ -9,7 +9,7 @@ namespace Generator.Gir
 	public class Repository
 	{
 		[XmlAttribute("version")]
-		public String Version { get; set; }
+		public string Version { get; set; }
 
 		[XmlElement("include")]
 		public List<Include> Includes { get; set; }
