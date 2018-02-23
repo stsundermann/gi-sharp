@@ -21,7 +21,12 @@ namespace Generator.Gir
 		public CInclude CInclude { get; set; }
 
 		[XmlElement("namespace")]
-		public Namespace NameSpace { get; set; }
+		public Namespace Namespace { get; set; }
+
+		public void GenerateNamespace()
+		{
+			Namespace.GenerateClasses();
+		}
 	}
 }
 

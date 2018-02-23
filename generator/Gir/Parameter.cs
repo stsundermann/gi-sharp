@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.ConstrainedExecution;
 using System.Xml.Serialization;
 
 namespace Generator.Gir
@@ -41,5 +42,9 @@ namespace Generator.Gir
 
         [XmlElement("type")]
         public Type Type;
+
+        public bool IsPointer => Type.CType.EndsWith("*");
+
+        public bool IsArray => Type.Array != null;
     }
 }

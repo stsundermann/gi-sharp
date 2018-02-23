@@ -3,15 +3,15 @@ using System.Xml.Serialization;
 
 namespace Generator.Gir
 {
-	public class Union
+	public class Union : IType
 	{
         [XmlAttribute("name")]
         public string Name;
 
-        [XmlAttribute("type", Namespace = "http://www.gtk.org/introspection/c/1.0")]
-        public string CType;
+		[XmlAttribute("type", Namespace = "http://www.gtk.org/introspection/c/1.0")]
+		public string CType { get; set; }
 
-        [XmlElement("doc")]
+		[XmlElement("doc")]
         public string Doc;
 
         [XmlElement("field")]

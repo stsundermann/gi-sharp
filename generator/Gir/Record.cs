@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 
 namespace Generator.Gir
 {
-	public class Record
+	public class Record : IType
 	{
         [XmlAttribute("deprecated")]
         public bool Deprecated;
@@ -29,10 +29,10 @@ namespace Generator.Gir
         [XmlAttribute("symbol-prefix", Namespace = "http://www.gtk.org/introspection/c/1.0")]
         public string CSymbolPrefix;
 
-        [XmlAttribute("type", Namespace = "http://www.gtk.org/introspection/c/1.0")]
-        public string CType;
+		[XmlAttribute("type", Namespace = "http://www.gtk.org/introspection/c/1.0")]
+		public string CType { get; set; }
 
-        [XmlAttribute("get-type", Namespace = "http://www.gtk.org/introspection/glib/1.0")]
+		[XmlAttribute("get-type", Namespace = "http://www.gtk.org/introspection/glib/1.0")]
         public string GLibGetType;
 
         [XmlAttribute("is-gtype-struct-for", Namespace = "http://www.gtk.org/introspection/glib/1.0")]

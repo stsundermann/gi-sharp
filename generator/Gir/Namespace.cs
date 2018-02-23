@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Xml;
 using System.Collections.Generic;
+using System.IO;
+using System.Net;
+using System.Security.Cryptography;
 using System.Xml.Serialization;
 
 namespace Generator.Gir
@@ -51,6 +54,15 @@ namespace Generator.Gir
 
 		[XmlElement("bitfield")]
 		public List<Bitfield> Bitfields { get; set; }
+
+		public void GenerateClasses()
+		{	
+			foreach (var clazz in Classes)
+			{
+				var dir = Directory.CreateDirectory(Name);
+				File.Create(Path.Combine(dir.FullName, clazz.Name + ".cs"));
+			}
+		}
 	}
 }
 

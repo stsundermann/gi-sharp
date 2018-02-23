@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 
 namespace Generator.Gir
 {
-	public class Class
+	public class Class : IType
 	{
         [XmlAttribute("abstract")]
         public bool Abstract;
@@ -20,10 +20,10 @@ namespace Generator.Gir
         [XmlAttribute("symbol-prefix", Namespace = "http://www.gtk.org/introspection/c/1.0")]
         public string CSymbolPrefix;
 
-        [XmlAttribute("type", Namespace = "http://www.gtk.org/introspection/c/1.0")]
-        public string CType;
+		[XmlAttribute("type", Namespace = "http://www.gtk.org/introspection/c/1.0")]
+		public string CType { get; set; }
 
-        [XmlAttribute("fundamental", Namespace = "http://www.gtk.org/introspection/glib/1.0")]
+		[XmlAttribute("fundamental", Namespace = "http://www.gtk.org/introspection/glib/1.0")]
         public bool Fundamental;
 
         [XmlAttribute("get-type", Namespace = "http://www.gtk.org/introspection/glib/1.0")]

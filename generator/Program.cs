@@ -14,9 +14,9 @@ namespace Generator
 
             using (var reader = XmlReader.Create(args[0]))
 			{
-				var repository = serializer.Deserialize(reader);
+				var repository = (Repository)serializer.Deserialize(reader);
 
-				return;
+				repository.GenerateNamespace();
 			}
 		}
 	}

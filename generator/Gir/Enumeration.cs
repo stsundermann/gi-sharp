@@ -31,5 +31,10 @@ namespace Generator.Gir
 
         [XmlElement("function")]
         public List<Function> Function;
+
+		public void Generate()
+		{
+			
+		}
 	}
 }
